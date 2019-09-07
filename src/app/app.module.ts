@@ -14,11 +14,14 @@ import { OurProductsComponent } from './our-products/our-products.component';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { SendEmailComponent } from './send-email/send-email.component';
 import {MatInputModule} from '@angular/material/input';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 @NgModule({
   declarations: [
     AppComponent,
     OurProductsComponent,
-    SendEmailComponent
+    SendEmailComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,9 @@ import {MatInputModule} from '@angular/material/input';
     MatButtonModule,
     MatCardModule,
     MatCarouselModule,
-    MatInputModule
+    MatInputModule,
+
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
