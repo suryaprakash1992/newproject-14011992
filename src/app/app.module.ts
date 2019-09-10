@@ -16,6 +16,7 @@ import { SendEmailComponent } from './send-email/send-email.component';
 import {MatInputModule} from '@angular/material/input';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     MatCardModule,
     MatCarouselModule,
     MatInputModule,
-
+    CarouselModule ,
     MDBBootstrapModule.forRoot()
   ],
   providers: [],
