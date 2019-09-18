@@ -17,6 +17,7 @@ import {MatInputModule} from '@angular/material/input';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { ScrollToModule } from 'ng2-scroll-to-el';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     MatCarouselModule,
     MatInputModule,
     CarouselModule ,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    ScrollToModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

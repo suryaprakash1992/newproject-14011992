@@ -4,30 +4,22 @@
           <div fxFlex="10%"    class="two_one">9629348181</div>
       </div> -->
       <div fxLayout="row" fxFlexFill fxLayoutAlign="center">
-              <button mat-button ><div fxFlex="15%"    class="two_one">Home</div></button>
-              <mat-menu #menu="matMenu">
-                     
-              </mat-menu>
-            <button mat-button ><div fxFlex="15%"    class="two_one">About</div></button>
-            <mat-menu #menu="matMenu">
-                 
-            </mat-menu>
-            <button mat-button ><div fxFlex="15%"    class="two_one">Products</div></button>
-            <mat-menu #menu="matMenu">
-              
-            </mat-menu>
-          <button mat-button ><div fxFlex="15%"    class="two_one">Gallery</div></button>
-          <mat-menu #menu="matMenu">
+              <button mat-button [scrollTo]="'#home'" [scrollDuration]="1000" [scrollOffset]="-100"><div fxFlex="15%"    class="two_one">Home</div></button>
             
-          </mat-menu>
-        <button mat-button ><div fxFlex="15%"    class="two_one">Blog</div></button>
-        <mat-menu #menu="matMenu">
-         
-        </mat-menu>
+              <button mat-button  [scrollTo]="'#products'" [scrollDuration]="1000" [scrollOffset]="-100"><div fxFlex="15%"    class="two_one">Products</div></button>
+              
+            <button mat-button  [scrollTo]="'#about'" [scrollDuration]="1000" [scrollOffset]="-100"><div fxFlex="15%"    class="two_one">About</div></button>
+            
+            
+            
+          <button mat-button  [scrollTo]="'#contactus'" [scrollDuration]="1000" [scrollOffset]="-100"><div fxFlex="15%"    class="two_one">Contact Us</div></button>
+          
+        <button mat-button [scrollTo]="'#blog'" [scrollDuration]="1000" [scrollOffset]="-100"><div fxFlex="15%"    class="two_one">Blog</div></button>
+       
       </div>
       
     </mat-toolbar>
-    <div class="bgimage">
+    <div class="bgimage" id="home">
         <img src="../assets/images/file.jpg" style="width:100%;">
       <div>
           <div class="text-block">
@@ -46,15 +38,21 @@
     </div>
     <!-- <div style="width"></div> -->
     <br>
-   
-    <app-our-products></app-our-products>
-    <br>
+    <div id="products">
+      <app-our-products></app-our-products>
+      <br>
+    </div>
     
-    <app-about-us></app-about-us>
-    <br>
-    <app-send-email></app-send-email>
+    <div id="about">
+      <app-about-us></app-about-us>
+      <br>
+    </div>
+    <div id="contactus">
+      <app-send-email></app-send-email>
 
-    <br><br>
+      <br><br>
+    </div>
+    
     <!-- <div fxLayout="row" fxLayoutAlign="start center" >
         <button mat-stroked-button color="accent">Accent</button>
     </div> -->
