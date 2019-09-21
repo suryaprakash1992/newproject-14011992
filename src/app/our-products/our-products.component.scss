@@ -1,6 +1,6 @@
 .products{
    margin-left: 5%;
-    color: black;
+    color: #9f1f19;
 
 }
 .card-size{
@@ -10,9 +10,16 @@
 p{
     color:#9f1f19;
 }
+b{
+  color:#9f1f19;
+  font-size: 25px;
+}
 mat-card{
   color:#9f1f19;
   font-family: 'Josefin Sans', sans-serif !important;
+}
+.product-header{
+  margin-left: 40%;
 }
 ul {
     list-style: none;
