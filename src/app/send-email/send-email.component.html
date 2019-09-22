@@ -13,7 +13,7 @@
                 Chennai-600024.
                 <br><br>
                 <b> Contact Us</b> haircraft.india.expo@gmail.com<br><br>
-                 +91 8939929944<br> +91 8870201484
+                 +91 8939929944
        </div>
        
        <div fxFlex="45%" >
@@ -22,32 +22,32 @@
                 <div >
                        
                             <mat-form-field class="example-full-width">
-                            <input matInput placeholder="Your Name" >
+                            <input #userName matInput placeholder="Your Name" >
                             </mat-form-field>
                 </div>
                 <div>
                        
                         <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Your Email" >
+                        <input #userEmail matInput placeholder="Your Email" >
                         </mat-form-field>
                 </div>
                 <div>
                        
                         <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Message Subject" >
+                        <input #mailSubject matInput placeholder="Message Subject" >
                         </mat-form-field>
                 </div>
                 <div>
                         
                             <mat-form-field class="example-full-width">
-                            <textarea matInput placeholder="Query/Inquiry"></textarea>
+                            <textarea #query matInput placeholder="Query/Inquiry"></textarea>
                             </mat-form-field>
                    
                 </div>
                <br>
                 <div fxLayout="row" fxLayoutAlign="center center" >
                 <div fxFlex="45%">
-                        <button mat-raised-button color="accent">Submit Query / Request </button>
+                        <button (click)="onSubmit()" mat-raised-button color="accent">Submit Query / Request </button>
                 </div>
                 
                 </div>

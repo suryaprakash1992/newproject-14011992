@@ -18,6 +18,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ScrollToModule } from 'ng2-scroll-to-el';
+import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +40,7 @@ import { ScrollToModule } from 'ng2-scroll-to-el';
     MatCarouselModule,
     MatInputModule,
     CarouselModule ,
+    HttpClientModule,
     MDBBootstrapModule.forRoot(),
     ScrollToModule.forRoot()
   ],
