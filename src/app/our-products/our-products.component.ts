@@ -15,12 +15,12 @@ export class OurProductsComponent implements OnInit {
   }
   customOptions: OwlOptions = {
     loop: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
-    dots: false,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: true,
     navSpeed: 700,
-    navText: ['', ''],
+    
     responsive: {
       0: {
         items: 1
@@ -35,7 +35,7 @@ export class OurProductsComponent implements OnInit {
         items: 1
       }
     },
-    nav: true
+    nav: false
   }
 
 }
