@@ -19,6 +19,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import {HttpClientModule} from '@angular/common/http';
+import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
+import { MatFormFieldModule, MatSelectModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,7 @@ import {HttpClientModule} from '@angular/common/http';
     MatInputModule,
     CarouselModule ,
     HttpClientModule,
+    NgxMatSelectSearchModule,
     MDBBootstrapModule.forRoot(),
     ScrollToModule.forRoot()
   ],
