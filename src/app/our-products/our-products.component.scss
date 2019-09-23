@@ -4,8 +4,8 @@
 
 }
 .card-size{
-  height: 300px;
-  width: 140px;
+  height: 200px;
+  width: 110px;
 }
 .owl-theme .owl-nav [class*=owl-] {
   background-color: #ffffff
@@ -27,11 +27,16 @@ mat-card{
 ul {
     list-style: none;
     color:#9f1f19;
+    
   }
   
   ul li:before {
     content: '✓';
+    
   }
   h1{
     color:#9f1f19;
   }
+  // li{
+  //   display: inline;
+  // }

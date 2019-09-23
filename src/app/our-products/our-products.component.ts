@@ -20,6 +20,7 @@ export class OurProductsComponent implements OnInit {
     pullDrag: true,
     dots: true,
     navSpeed: 700,
+    autoplay:true,
     
     responsive: {
       0: {
