@@ -19,46 +19,48 @@
        <div fxFlex="45%" >
                 <h1>Send Us An Email</h1>
                 <p>Log your Query/input over here</p>
-                <div >
-                       
-                            <mat-form-field class="example-full-width">
-                            <input #userName matInput placeholder="Your Name" >
-                            </mat-form-field>
-                </div>
-                <div>
-                       
-                        <mat-form-field class="example-full-width">
-                        <input #contactNumber matInput placeholder="Your Contact Number" >
-                        </mat-form-field>
-                </div>
-                <div>
-                       
-                        <mat-form-field class="example-full-width">
-                        <input #userEmail matInput placeholder="Your Email" >
-                        </mat-form-field>
-                </div>
-                <div>
-                       
-                        <mat-form-field class="example-full-width">
-                        <input #mailSubject matInput placeholder="Message Subject" >
-                        </mat-form-field>
-                </div>
-                <div>
-                        
-                            <mat-form-field class="example-full-width">
-                            <textarea #query matInput placeholder="Query/Inquiry"></textarea>
-                            </mat-form-field>
-                   
-                </div>
-               <br>
-                <div fxLayout="row" fxLayoutAlign="center center" >
-                <div fxFlex="45%">
-                        <button (click)="onSubmit()" mat-raised-button color="accent">Submit Query / Request </button>
-                </div>
-                
-                </div>
+               
+                                <form [formGroup]="formInfo" (ngSubmit)="contactForm(form.value)" #form="ngForm">
+                                 <div>
+                                    <mat-form-field class="example-full-width">
+                                        <input  matInput  formControlName="name" placeholder="Your Name" ngModel>
+                                    </mat-form-field>
+                                    <!-- <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-warning">
+                                      <p *ngIf="name.errors.required">Error!</p>
+                                      <p *ngIf="name.errors.minlength">Minimum 3 Chars!</p>
+                                    </div> -->
+                                </div>
+                                <div>
+                                
+                                    <mat-form-field class="example-full-width">
+                                        <input  matInput type="email"  placeholder="Your Email Id"formControlName="email" ngModel>
+                                   </mat-form-field>
+                                    <!-- <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-warning">
+                                      <p *ngIf="email.errors.required">Error!</p>
+                                      <p *ngIf="email.errors.email">E-mail Incorrect</p>
+                                    </div> -->
+                                </div>
+                                <div>
+                                <mat-form-field class="example-full-width">
+                                    <input matInput  formControlName="contactNum" ngModel placeholder="Your Contact Number">
+                                </mat-form-field>  
+                                </div>
+                                <div>
+                                <mat-form-field class="example-full-width">
+                                    <textarea formControlName="message" matInput placeholder="Query/Inquiry" cols="30" rows="5" ngModel></textarea>
+                                </mat-form-field> 
+                                </div>  
+                                <br>
+                                <div fxLayout="row" fxLayoutAlign="center center" >
+                                <div fxFlex="55%">
+                                         <button  [disabled]="form.invalid" mat-raised-button color="accent">Submit Query / Request </button>
+                                  <!-- <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit Query / Request</button> -->
+                                </div>
+                                </div>
+                                </form>
+        </div>
        </div>
-       </div>
+     
 
 
 <br><br>

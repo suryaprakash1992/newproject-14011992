@@ -1,6 +1,12 @@
 import { Component, OnInit, ElementRef, ViewChild} from '@angular/core';
 import {HttpClient,HttpParams} from "@angular/common/http";
 import 'rxjs/add/operator/map';
+import { FormBuilder, Validators } from '@angular/forms';
+
+
+// import * as _swal from 'sweetalert';
+// import { SweetAlert } from 'sweetalert/typings/core';
+// const swal: SweetAlert = _swal as any;
 
 
 @Component({
@@ -16,7 +22,20 @@ export class SendEmailComponent implements OnInit {
   @ViewChild('mailSubject', {static: true}) mailSubject: ElementRef;
   @ViewChild('query', {static: true}) query: ElementRef;
   @ViewChild('contactNumber', {static: true}) contactNumber: ElementRef;
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+    public _formBuilder: FormBuilder) {
+    
+   }
+   formInfo = this._formBuilder.group({
+    name: ['', [Validators.required, Validators.minLength(3)]],
+    email: ['', [Validators.required, Validators.email]],
+    contactNum: ['', [Validators.required]],
+    message: ['', [Validators.required]]
+  });
+
+  get name() { return this.formInfo.get('name') }
+  get email() { return this.formInfo.get('email') }
+  
 
   ngOnInit() {
   //   this.http.get("https://restcountries.eu/rest/v2/all").subscribe(response=>{
@@ -28,6 +47,18 @@ export class SendEmailComponent implements OnInit {
   //     }
      
   // })
+  }
+  contactForm(form) {
+    this.http.post('http://localhost:3000/form', form)
+        .subscribe((resp) => {
+          debugger;
+          alert("sucess");
+          //swal("Formulário de Contato", "Mensagem enviada com sucesso!", "success");
+         // this.formInfo.reset();
+        }, error => {
+          debugger;
+          console.error(error, 'Opps: Houve um erro, tente novamente!');
+        });
   }
   onSubmit(){
     let name:string=this.userName.nativeElement.value;

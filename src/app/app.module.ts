@@ -21,6 +21,8 @@ import { ScrollToModule } from 'ng2-scroll-to-el';
 import {HttpClientModule} from '@angular/common/http';
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { MatFormFieldModule, MatSelectModule } from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { MatFormFieldModule, MatSelectModule } from '@angular/material';
     CarouselModule ,
     HttpClientModule,
     NgxMatSelectSearchModule,
+    FormsModule,
+    ReactiveFormsModule,
     MDBBootstrapModule.forRoot(),
     ScrollToModule.forRoot()
   ],
