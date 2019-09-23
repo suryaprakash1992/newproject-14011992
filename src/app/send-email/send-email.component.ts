@@ -46,7 +46,7 @@ export class SendEmailComponent implements OnInit {
     
     // this.http.get("http://localhost:4444/api/Mail/SentEmail",{params}).
     // map(data=>console.log(data))
-    this.http.get("http://localhost:4444/api/Mail/SentEmail",{params})
+    this.http.get("http://haircraftservices.azurewebsites.net/api/Mail/SentEmail",{params})
     .subscribe(response=>{
         console.log(response);
     })
