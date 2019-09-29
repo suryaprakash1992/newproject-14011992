@@ -38,18 +38,23 @@ export class SendEmailComponent implements OnInit {
   
 
   ngOnInit() {
-  //   this.http.get("https://restcountries.eu/rest/v2/all").subscribe(response=>{
-  //     //this.countryCode=response;
+  //   this.http.get("http://localhost:4444/api/values/5").subscribe(response=>{
+  //     debugger;
+  //     this.countryCode=response;
   //     for(this.i=0;this.i<response.toString().length;this.i++){
   //       debugger;
   //       this.country[this.i]=response[this.i].name;
   //       console.log(response);
   //     }
      
-  // })
+  // },
+  //  error => {
+  //   debugger;
+    
+  //  })
   }
   contactForm(form) {
-    this.http.post('http://localhost:3000/form', form)
+    this.http.post('http://haircraftservices.azurewebsites.net/api/Mail/SentEmail', form)
         .subscribe((resp) => {
           debugger;
           alert("sucess");
