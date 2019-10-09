@@ -68,7 +68,8 @@ export class SendEmailComponent implements OnInit {
         }, error => {
           debugger;
           this._snackBar.open('Failed to log the query','',{
-            duration:3000
+            duration:3000,
+            panelClass: ['red-snackbar']
           })
           //console.error(error, 'Opps: Houve um erro, tente novamente!');
         });
