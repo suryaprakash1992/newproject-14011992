@@ -23,7 +23,7 @@ import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { MatFormFieldModule, MatSelectModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppFooterComponent } from './app-footer/app-footer.component';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -35,6 +35,7 @@ import { AppFooterComponent } from './app-footer/app-footer.component';
   ],
   imports: [
     BrowserModule,
+    MatSnackBarModule,
     AppRoutingModule,
     FlexLayoutModule,
     NoopAnimationsModule,

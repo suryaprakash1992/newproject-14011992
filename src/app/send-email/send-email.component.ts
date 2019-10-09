@@ -2,6 +2,7 @@ import { Component, OnInit, ElementRef, ViewChild} from '@angular/core';
 import {HttpClient,HttpParams} from "@angular/common/http";
 import 'rxjs/add/operator/map';
 import { FormBuilder, Validators } from '@angular/forms';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 
 // import * as _swal from 'sweetalert';
@@ -23,7 +24,7 @@ export class SendEmailComponent implements OnInit {
   @ViewChild('query', {static: true}) query: ElementRef;
   @ViewChild('contactNumber', {static: true}) contactNumber: ElementRef;
   constructor(private http: HttpClient,
-    public _formBuilder: FormBuilder) {
+    public _formBuilder: FormBuilder,private _snackBar: MatSnackBar) {
     
    }
    formInfo = this._formBuilder.group({
@@ -58,12 +59,14 @@ export class SendEmailComponent implements OnInit {
    // this.http.post('http://localhost:4444/api/Mail/SentEmail', form)
         .subscribe((resp) => {
           debugger;
-          alert("sucess");
+          this._snackBar.open('Query Submitted Sucessfully')
+          //alert("sucess");
           //swal("Formulário de Contato", "Mensagem enviada com sucesso!", "success");
          // this.formInfo.reset();
         }, error => {
           debugger;
-          console.error(error, 'Opps: Houve um erro, tente novamente!');
+          this._snackBar.open('Failed to submit query')
+          //console.error(error, 'Opps: Houve um erro, tente novamente!');
         });
   }
   onSubmit(){
