@@ -55,6 +55,7 @@ export class SendEmailComponent implements OnInit {
   }
   contactForm(form) {
     this.http.post('https://haircraftservices.azurewebsites.net/api/Mail/SentEmail', form)
+   // this.http.post('http://localhost:4444/api/Mail/SentEmail', form)
         .subscribe((resp) => {
           debugger;
           alert("sucess");

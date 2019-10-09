@@ -22,6 +22,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { MatFormFieldModule, MatSelectModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppFooterComponent } from './app-footer/app-footer.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     OurProductsComponent,
     SendEmailComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    AppFooterComponent
   ],
   imports: [
     BrowserModule,
