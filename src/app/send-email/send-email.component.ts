@@ -59,13 +59,17 @@ export class SendEmailComponent implements OnInit {
    // this.http.post('http://localhost:4444/api/Mail/SentEmail', form)
         .subscribe((resp) => {
           debugger;
-          this._snackBar.open('Query Submitted Sucessfully')
+          this._snackBar.open('Query Submitted Sucessfully','',{
+            duration:3000
+          })
           //alert("sucess");
           //swal("Formulário de Contato", "Mensagem enviada com sucesso!", "success");
          // this.formInfo.reset();
         }, error => {
           debugger;
-          this._snackBar.open('Failed to submit query')
+          this._snackBar.open('Failed to log the query','',{
+            duration:3000
+          })
           //console.error(error, 'Opps: Houve um erro, tente novamente!');
         });
   }
