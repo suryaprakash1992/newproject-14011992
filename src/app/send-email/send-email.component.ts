@@ -60,7 +60,8 @@ export class SendEmailComponent implements OnInit {
         .subscribe((resp) => {
           debugger;
           this._snackBar.open('Query Submitted Sucessfully','',{
-            duration:3000
+            duration:3000,
+            panelClass: ['red-snackbar']
           })
           //alert("sucess");
           //swal("Formulário de Contato", "Mensagem enviada com sucesso!", "success");
