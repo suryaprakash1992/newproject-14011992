@@ -5,7 +5,9 @@
       </div> -->
       
       <div fxLayout="row" fxLayoutAlign="start none" >
-          <div><img class="logo" src="../assets/images/logo/haircraft435.25_gold.png"></div>
+          <div>
+            <img class="logo" src="../assets/images/logo/haircraft435.25_gold.png">
+          </div>
       </div>
       <div fxLayout="row" class="menu-align" fxFlexFill fxLayoutAlign="center center">
        
@@ -15,6 +17,8 @@
               <button mat-button  [scrollTo]="'#products'" [scrollDuration]="1000" [scrollOffset]="-100"><div fxFlex="15%"    class="two_one">Products</div></button>
               
             <button mat-button  [scrollTo]="'#about'" [scrollDuration]="1000" [scrollOffset]="-100"><div fxFlex="15%"    class="two_one">About</div></button>
+            <button mat-button  [scrollTo]="'#payment'" [scrollDuration]="1000" [scrollOffset]="-100"><div fxFlex="15%"    class="two_one">Payment</div></button>
+            <button mat-button  ><div fxFlex="15%"    class="two_one">Blog</div></button>
             
             
             
@@ -53,6 +57,9 @@
     <div id="about">
       <app-about-us></app-about-us>
     
+    </div>
+    <div id="payment">
+      <app-payment-det></app-payment-det>
     </div>
     <div id="contactus">
       <app-send-email></app-send-email>

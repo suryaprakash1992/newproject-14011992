@@ -24,6 +24,7 @@ import { MatFormFieldModule, MatSelectModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppFooterComponent } from './app-footer/app-footer.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { PaymentDetComponent } from './payment-det/payment-det.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     OurProductsComponent,
     SendEmailComponent,
     AboutUsComponent,
-    AppFooterComponent
+    AppFooterComponent,
+    PaymentDetComponent
   ],
   imports: [
     BrowserModule,

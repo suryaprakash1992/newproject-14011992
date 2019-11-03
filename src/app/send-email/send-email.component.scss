@@ -4,6 +4,10 @@
      color: #9f1f19;
  
  }
+ .map{
+   width:20%;
+   height: 20%;
+ }
  .mat-raised-button{
   background-color: #cc8d09;
  }
@@ -28,7 +32,8 @@
   }
   .logo{
     width:300px;
-    margin-left: 20%;
+    height: 300px;
+   // margin-left: 20%;
   }
   .mat-form-field {
     width: 450px;
