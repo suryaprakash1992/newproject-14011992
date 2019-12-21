@@ -8,10 +8,14 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./our-products.component.scss']
 })
 export class OurProductsComponent implements OnInit {
+  url:string;
+  text:string
 
   constructor() { }
 
   ngOnInit() {
+    this.url="https://www.haircraftindia.com/"
+    this.text="Hair Craft India"
   }
   customOptions: OwlOptions = {
     loop: true,

@@ -25,6 +25,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppFooterComponent } from './app-footer/app-footer.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { PaymentDetComponent } from './payment-det/payment-det.component';
+import { JwSocialButtonsModule } from 'jw-angular-social-buttons';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { PaymentDetComponent } from './payment-det/payment-det.component';
     HttpClientModule,
     NgxMatSelectSearchModule,
     FormsModule,
+    JwSocialButtonsModule,
     ReactiveFormsModule,
     MDBBootstrapModule.forRoot(),
     ScrollToModule.forRoot()

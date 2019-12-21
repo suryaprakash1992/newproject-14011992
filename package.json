@@ -28,6 +28,7 @@
     "angular-bootstrap-md": "^8.2.0",
     "animate.css": "^3.7.2",
     "bootstrap": "^3.4.1",
+    "jw-angular-social-buttons": "^1.0.0",
     "ng2-scroll-to-el": "^1.2.1",
     "ngx-mat-select-search": "^1.8.0",
     "ngx-owl-carousel-o": "^2.0.1",
